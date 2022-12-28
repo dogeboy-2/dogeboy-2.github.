@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+
+<meta name="author" content="狗_君">
+
+<meta name="description" content="Locker 浏览器 使用 Trident 7.0 渲染内核，能够快速、正确的渲染网页，从而带给您更好的上网体验。">
+
+<meta name="Keywords" content="Locker,Locker Trident,Locker 网页浏览器,INTRON Locker">
+
+<meta http-equiv="pragma" content="no-cache"> 
+
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+
+<title>Pilot Locker</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./INTRON Locker_files/foundation.min.css">
+
+  <script src="./INTRON Locker_files/jquery.min.js.下载"></script>
+
+  <script src="./INTRON Locker_files/foundation.min.js.下载"></script><style></style>
+
+  <script src="./INTRON Locker_files/modernizr.js.下载"></script>
+
+<style>
+
+.top-bar {
+
+backdrop-filter:blur(30px);/*设置顶栏阴影*/
+
+}
+
+.title{
+
+    color:#000000;/*顶栏标题字体颜色为纯黑*/
+
+}
+
+body{
+
+    background-color: #ffffff;/*网页背景为纯白*/
+
+  }
+
+
+h1 {
+
+  text-align: center; /*文本居中*/
+
+  font-family: Microsoft Yahei, Helvetica, sans-serif; /*标题字体*/
+
+  color: #20123a;/*标题颜色*/
+
+  margin-bottom: 16px;/*行间距*/
+
+font-size: 2.5rem;/*字体大小*/
+
+line-height: 1.1;/*字体粗细*/
+
+}
+
+.text1 {
+
+  text-align: left;/*文本左对齐*/
+
+  font-family: Microsoft Yahei;/*文本字体*/
+
+ color: #20123a;/*文本颜色*/
+
+  margin-bottom: 16px;/*行间距*/
+
+font-size: 2.5rem;/*字体大小*/
+
+line-height: 1.1;/*字体粗细*/
+
+margin-left: 32px;/*左边距*/
+
+margin-top: 20%;/*上边距*/
+
+}
+
+.text2 {
+
+text-align: left;/*文本左对齐*/
+
+font-family: Microsoft Yahei;/*设置文本字体*/
+
+margin-top: 0;/*文本上边距*/
+
+padding: 0;/*设置内边距*/
+
+line-height: 1.125;/*设置行高*/
+
+margin-left: 32px;/*设置左边距*/
+
+}
+
+.img_wrap{
+
+  text-align:center;/* 图片居中 */
+
+}
+.c { 
+	width: 170px; /* 宽度 */
+
+	height: 45px; /* 高度 */
+
+	border-radius: 50px; /* 边框半径 */
+
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+
+     outline: none;  /* 设置按钮为无边框样式 */
+
+	color: white;/* 字体颜色 */
+
+     border-radius: 50px;
+
+     background: #139be8;
+
+     box-shadow:  20px 20px 60px #bebebe,
+                
+     -20px -20px 60px #ffffff;
+
+}
+
+.c:hover { /* 鼠标移入按钮范围时改变颜色 */
+
+	background: #147bca;
+
+}
+.f { /* 按钮美化 */
+	width: 300px; /* 宽度 */
+
+	height: 50px; /* 高度 */
+
+                border-radius: 50px;/*设置圆角大小*/
+
+                background: #139be8;/*设置背景颜色*/
+
+                color: white;/* 字体颜色 */
+
+                box-shadow:  20px 20px 50px #bebebe,
+
+                -15px -15px 40px #ffffff;/*阴影设置（从新拟物官网抄的）*/
+}
+
+.f:hover { /* 鼠标移入按钮范围时改变颜色 */
+
+	background: #fff;
+     
+     color: #149be8;
+
+     box-shadow:  20px 10px 10px #bababa,
+
+     -20px -20px 60px #ffffff;/*阴影设置（从新拟物官网抄的）*/
+
+}
+
+
+#button { /* 按钮美化 */
+
+	width: 120px; /* 宽度 */
+
+	height: 36px; /* 高度 */
+
+  vertical-align:middle;
+
+    text-align: center;
+
+     background: #139be8;
+
+     cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+
+	outline: none; /* 不显示轮廓线 */
+
+	color: black; /* 字体颜色 */
+  
+  margin-top:10%;;
+
+  font-size: 5px;
+
+  border-radius: 50px;/*圆角大小*/
+
+  float: right;/*设置浮动方向*/
+
+  background: #fafafa;/*按钮颜色*/
+
+  box-shadow:  20px 20px 60px #bebebe,
+
+              -20px -20px 60px #ffffff;/*阴影设置*/
+ 
+  line-height: 40px;              
+}
+
+#button:hover { /* 鼠标移入按钮范围时改变颜色 */
+
+	background: #d5d5d5;
+
+}
+
+.photo1{
+
+ grid-column-gap: 80px;
+
+grid-template-areas: "body media";
+             
+max-width: 1344px;/*最大宽度*/
+
+min-width: 304px;
+
+float: right;
+
+margin-top:-15%;
+
+}
+
+.az{
+
+font-size : 6px;
+
+float : left;
+
+}
+#_copy{
+
+align-items:center;
+
+background:#4494d5;
+
+border-radius:3px;
+
+color:#000000;
+
+cursor:pointer;
+
+display:flex;
+
+font-size:13px;
+
+height:30px;
+
+justify-content:center;
+
+position:absolute;
+
+width:60px;
+
+z-index:1000
+
+}
+
+#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{
+
+display:none!important
+
+}
+
+.modal-open{
+
+overflow:auto!important
+
+}
+
+._sf_adjust_body{
+
+padding-right:0!important
+
+}
+
+.super_copy_btns_div{
+
+position:fixed;
+
+width:154px;
+
+left:10px;
+
+top:45%;
+
+background:#e7f1ff;
+
+border:2px solid #4595d5;
+
+font-weight:600;
+
+border-radius:100px;
+
+font-family:
+
+-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+
+z-index:5000
+
+}
+.super_copy_btns_logo{
+
+width:100%;
+
+background:#4595d5;
+
+text-align:center;
+
+font-size:12px;
+
+color:#e7f1ff;
+
+line-height:30px;
+
+height:30px
+
+}
+
+.super_copy_btns_btn{
+
+display:block;
+
+width:128px;
+
+height:28px;
+
+background:#7f5711;
+
+border-radius:4px;
+
+color:#fff;
+
+font-size:12px;
+
+border:0;
+
+outline:0;
+
+margin:10px auto;
+
+font-weight:700;
+
+cursor:pointer;
+
+opacity:.9
+
+}
+
+.super_copy_btns_btn:hover{
+
+opacity:.8
+
+}.super_copy_btns_btn:active{
+
+opacity:1
+
+}</style>
+
+</head>
+
+<body class="f-topbar-fixed">
+
+<div class="fixed">
+
+<nav class="top-bar" data-topbar="">
+
+  <ul class="title-area">
+
+    <li class="name">
+
+      <h2 class="title">　　Pilot Locker　　</h2>
+
+    </li>
+
+  
+
+</ul>
+
+<section class="top-bar-section">
+
+    <ul class="left">
+
+      <li class="active"><a href="./INTRON Locker.html">Locker 主页　</a></li>
+
+
+      </ul>
+
+</section><section class="top-bar-section">
+
+          <ul class="right">
+
+
+
+            <li class="active"><a href="https://down.intron.online/locker/locker.exe" download="Locker.exe" id="button">　下载 Locker　</a></li>
+
+          </ul>
+
+
+</div>
+
+<!-- 初始化 Foundation JS -->
+
+<script>
+
+$(document).ready(function() {
+
+    $(document).foundation();
+
+})
+
+</script>
+
+
+<div class="img_wrap">
+
+      <img src="./INTRON Locker_files/logo.jpg" alt="Locker 图标">
+
+</div>
+
+<center><p style="font-size:18px">Pilot Locker</p></center>
+
+<center><h1 style="font-size:50px">天生强大</h1><center>
+
+<a href="https://down.intron.online/locker/locker.exe" download="locker.exe">
+
+</a><center><a href="https://down.intron.online/locker/locker.exe" download="locker.exe"><button type="button" class="f" title="下载 Locker">立即下载 Locker</button>
+
+</a>
+
+<center><p>适用于 Windows 11 或 Windows 10</p>
+
+<center><p>推荐使用 Windows 11 运行 Locker</p>
+
+<h2 class="text1">　更快的上网体验</h2> 
+
+<p class="text2"><br>　          Locker 使用 Trident 7.0 （IE11）渲染引擎。相对于原版IE<sup>1</sup>，Locker</p>  
+
+<p class="text2">　         上网速度更快，浏览质量更好，是您的优秀选择。</p>
+
+<img src="./INTRON Locker_files/速度.png" alt="上网速度" class="photo1">
+
+<h2 class="text1">　保护你的隐私</h2> 
+
+<p class="text2"><br>　          Locker 不会记录你的浏览记录，从而让别人无法查看历史记录。</p>
+  
+<p class="text2">　          你在 Locker 上看过什么，除了运营商之外，只有你知道。</p>
+
+<img src="./INTRON Locker_files/安全.png" alt="隐私安全" class="photo1">
+
+<h2>&nbsp;</h2>
+
+<h2>&nbsp;</h2>
+
+<p class="az"><sup>1</sup>IE、 Internet Explorer 、Internet Explorer 图标是Microsoft Corporation 的商标。</p>
+
+<h2>&nbsp;</h2>
+
+
+<p4><br>　官方邮箱：dogeboy2@outlook.com</p4>
+
+
+</center>
+</center></center></center></body></html>
