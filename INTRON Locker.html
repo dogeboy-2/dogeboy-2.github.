@@ -159,11 +159,17 @@ margin-left: 32px;/*设置左边距*/
      -20px -20px 60px #ffffff;/*阴影设置（从新拟物官网抄的）*/
 
 }
-.button { /* 按钮美化 */
 
-	width: 30px; /* 宽度 */
 
-	height: 45px; /* 高度 */
+#button { /* 按钮美化 */
+
+	width: 120px; /* 宽度 */
+
+	height: 36px; /* 高度 */
+
+  vertical-align:middle;
+
+    text-align: center;
 
      background: #139be8;
 
@@ -171,27 +177,28 @@ margin-left: 32px;/*设置左边距*/
 
 	outline: none; /* 不显示轮廓线 */
 
-	font-family: Microsoft YaHei; /* 设置字体 */
+	color: black; /* 字体颜色 */
+  
+  margin-top:10%;;
 
-	color: white; /* 字体颜色 */
+  font-size: 5px;
 
-	font-size: 1px; /* 字体大小 */
+  border-radius: 50px;/*圆角大小*/
 
-                border-radius: 50px;/*圆角大小*/
+  float: right;/*设置浮动方向*/
 
-               float: right;/*设置浮动方向*/
+  background: #fafafa;/*按钮颜色*/
 
-                background: #139be8;/*按钮颜色*/
+  box-shadow:  20px 20px 60px #bebebe,
 
-                box-shadow:  20px 20px 60px #bebebe,
-
-                -20px -20px 60px #ffffff;/*阴影设置*/
-                
+              -20px -20px 60px #ffffff;/*阴影设置*/
+ 
+  line-height: 40px;              
 }
 
-.button:hover { /* 鼠标移入按钮范围时改变颜色 */
+#button:hover { /* 鼠标移入按钮范围时改变颜色 */
 
-	background: #1599FF;
+	background: #d5d5d5;
 
 }
 
@@ -380,12 +387,11 @@ opacity:1
 
           <ul class="right">
 
-            <li><a href="https://down.intron.online/locker/locker.exe" download="Locker.exe">　下载 Locker　</a></li>
+
+
+            <li class="active"><a href="https://down.intron.online/locker/locker.exe" download="Locker.exe" id="button">　下载 Locker　</a></li>
 
           </ul>
-
-        </section></nav>
-
 
 
 </div>
